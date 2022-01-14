@@ -69,6 +69,52 @@ const jsElements = [
       },
       position: { x: -240, y: 0 },
     },
+    { id: 'webapis-dom', source: 'webapis', target: 'dom', sourceHandle: 'b', targetHandle: 'a', type: 'smooth', arrowHeadType: 'arrowclosed', label: '', style: { stroke: '#35e0d2' } },
+    { id: 'webapis-xhr-fetch', source: 'webapis', target: 'xhr-fetch', sourceHandle: 'b', targetHandle: 'a', type: 'smooth', arrowHeadType: 'arrowclosed', label: '', style: { stroke: '#35e0d2' } },
+    { id: 'webapis-storage', source: 'webapis', target: 'storage', sourceHandle: 'b', targetHandle: 'a', type: 'smooth', arrowHeadType: 'arrowclosed', label: '', style: { stroke: '#35e0d2' } },
+    { id: 'webapis-video-audio', source: 'webapis', target: 'video-audio', sourceHandle: 'b', targetHandle: 'a', type: 'smooth', arrowHeadType: 'arrowclosed', label: '', style: { stroke: '#35e0d2' } },
+    { id: 'webapis-drawing-graphics', source: 'webapis', target: 'drawing-graphics', sourceHandle: 'b', targetHandle: 'a', type: 'smooth', arrowHeadType: 'arrowclosed', label: '', style: { stroke: '#35e0d2' } },
+
+    {
+      id: 'dom',
+      type: 'rightCustom',
+      data: {
+        text: 'DOM',
+      },
+      position: { x: -400, y: -57 },
+    },
+    {
+      id: 'xhr-fetch',
+      type: 'rightCustom',
+      data: {
+        text: 'XHR & Fetch',
+      },
+      position: { x: -400, y: -24 },
+    },
+    {
+      id: 'storage',
+      type: 'rightCustom',
+      data: {
+        text: 'Storage',
+      },
+      position: { x: -400, y: 9 },
+    },
+    {
+      id: 'video-audio',
+      type: 'rightCustom',
+      data: {
+        text: 'Video & Audio',
+      },
+      position: { x: -400, y: 40 },
+    },
+    {
+      id: 'drawing-graphics',
+      type: 'rightCustom',
+      data: {
+        text: 'Drawing Graphics',
+      },
+      position: { x: -400, y: 72 },
+    },
     
   ];
 
@@ -127,6 +173,17 @@ const jsElements = [
     width: 'auto',
   }
 
+  const subNode = {
+    color: 'black',
+    // border: '1px solid black',
+    backgroundColor: '#35e0d2',
+    borderRadius: '2px',
+    padding: '2px',
+    fontSize: 'small',
+    textAlign: 'center',
+    width: '120px',
+  }
+
   const jsCustomNode = ({ data }) => {
     return (
       <div style={jsNode}>
@@ -178,12 +235,22 @@ const jsElements = [
     )
   }
 
+  const rightCustomNode = ({ data }) => {
+    return (
+      <div style={subNode}>
+        <Handle id='a' type="target" position="right" style={{ opacity: '0' }} />
+        <div>{data.text}</div>
+      </div>
+    )
+  }
+
   const nodeTypes = {
     jsCustom: jsCustomNode,
     fundamentalsCustom: fundamentalsCustomNode,
     toolingmiscCustom: toolingmiscCustomNode,
     advancedCustom: advancedCustomNode,
     webapisCustom: webapisCustomNode,
+    rightCustom: rightCustomNode,
   }
 
   return (
