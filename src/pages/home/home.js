@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Javascript from '../../components/diagrams/JavaScript/JavaScript'
+import Javascript from '../../components/diagrams/JavaScript'
 
 const Home = () => {
   return (

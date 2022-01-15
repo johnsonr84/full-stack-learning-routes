@@ -2,11 +2,12 @@ import * as React from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from './pages/home/home'
+import Nav from './components/Nav'
 
 function App() {
   return (
     <div className="App">
-      <h1>Welcome to Full Stack Learning Routes!</h1>
+    <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
