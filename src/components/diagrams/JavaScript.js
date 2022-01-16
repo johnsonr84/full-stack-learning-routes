@@ -40,16 +40,79 @@ const jsElements = [
       data: {
         text: <strong>Fundamentals</strong>,
       },
-      position: { x: 400, y: 0 },
+      position: { x: 600, y: 0 },
     },
-
     {
       id: 'toolingmisc',
       type: 'toolingmiscCustom',
       data: {
         text: <strong>Tooling & Misc</strong>,
       },
-      position: { x: 68, y: -200 },
+      position: { x: 68, y: -270 },
+    },
+    { id: 'toolingmisc-eslint', source: 'toolingmisc', target: 'eslint', sourceHandle: 'd', targetHandle: 'a', type: 'smooth', arrowHeadType: 'arrowclosed', label: 'Linters', style: { stroke: '#23a5f7' } },
+    { id: 'toolingmisc-prettier', source: 'toolingmisc', target: 'prettier', sourceHandle: 'd', targetHandle: 'a', type: 'smooth', arrowHeadType: 'arrowclosed', label: 'Code Formatters', style: { stroke: '#23a5f7' } },
+    { id: 'toolingmisc-webpack', source: 'toolingmisc', target: 'webpack', sourceHandle: 'd', targetHandle: 'a', type: 'smooth', arrowHeadType: 'arrowclosed', label: '', style: { stroke: '#23a5f7' } },
+    { id: 'toolingmisc-rollup', source: 'toolingmisc', target: 'rollup', sourceHandle: 'd', targetHandle: 'a', type: 'straight', arrowHeadType: 'arrowclosed', label: 'Bundlers', style: { stroke: '#23a5f7' } },
+    { id: 'toolingmisc-parcel', source: 'toolingmisc', target: 'parcel', sourceHandle: 'd', targetHandle: 'a', type: 'smooth', arrowHeadType: 'arrowclosed', label: '', style: { stroke: '#23a5f7' } },
+    { id: 'toolingmisc-nextsteps', source: 'toolingmisc', target: 'nextsteps', sourceHandle: 'd', targetHandle: 'a', type: 'smooth', arrowHeadType: 'arrowclosed', label: '', style: { stroke: '#23a5f7' } },
+    { id: 'toolingmisc-typescript', source: 'toolingmisc', target: 'typescript', sourceHandle: 'd', targetHandle: 'a', type: 'smooth', arrowHeadType: 'arrowclosed', label: '', style: { stroke: '#23a5f7' } },
+   
+    {
+      id: 'eslint',
+      type: 'leftCustom',
+      data: {
+        text: 'eslint',
+      },
+      position: { x: 400, y: -430 },
+    },
+    {
+      id: 'prettier',
+      type: 'leftCustom',
+      data: {
+        text: 'Prettier',
+      },
+      position: { x: 400, y: -360 },
+    },
+    {
+      id: 'webpack',
+      type: 'leftCustom',
+      data: {
+        text: 'Webpack',
+      },
+      position: { x: 400, y: -300 },
+    },
+    {
+      id: 'rollup',
+      type: 'leftCustom',
+      data: {
+        text: 'Rollup',
+      },
+      position: { x: 400, y: -270 },
+    },
+    {
+      id: 'parcel',
+      type: 'leftCustom',
+      data: {
+        text: 'Parcel',
+      },
+      position: { x: 400, y: -240 },
+    },
+    {
+      id: 'typescript',
+      type: 'leftCustom',
+      data: {
+        text: 'TypeScript',
+      },
+      position: { x: 400, y: -170 },
+    },
+    {
+      id: 'nextsteps',
+      type: 'leftCustom',
+      data: {
+        text: 'Next Steps',
+      },
+      position: { x: 400, y: -100 },
     },
 
     {
@@ -173,10 +236,21 @@ const jsElements = [
     width: 'auto',
   }
 
-  const subNode = {
+  const apiNode = {
     color: 'black',
     // border: '1px solid black',
     backgroundColor: '#35e0d2',
+    borderRadius: '2px',
+    padding: '2px',
+    fontSize: 'small',
+    textAlign: 'center',
+    width: '120px',
+  }
+
+  const toolingNode = {
+    color: 'black',
+    // border: '1px solid black',
+    backgroundColor: '#23a5f7',
     borderRadius: '2px',
     padding: '2px',
     fontSize: 'small',
@@ -237,8 +311,17 @@ const jsElements = [
 
   const rightCustomNode = ({ data }) => {
     return (
-      <div style={subNode}>
+      <div style={apiNode}>
         <Handle id='a' type="target" position="right" style={{ opacity: '0' }} />
+        <div>{data.text}</div>
+      </div>
+    )
+  }
+
+  const leftCustomNode = ({ data }) => {
+    return (
+      <div style={toolingNode}>
+        <Handle id='a' type="target" position="left" style={{ opacity: '0' }} />
         <div>{data.text}</div>
       </div>
     )
@@ -251,6 +334,7 @@ const jsElements = [
     advancedCustom: advancedCustomNode,
     webapisCustom: webapisCustomNode,
     rightCustom: rightCustomNode,
+    leftCustom: leftCustomNode,
   }
 
   return (
