@@ -159,6 +159,8 @@ const jsElements = [
     { id: 'advanced-iterators', source: 'advanced', target: 'iterators', sourceHandle: 'b', targetHandle: 'a', type: 'smooth', arrowHeadType: 'arrowclosed', style: { stroke: '#f79501' } },
     { id: 'advanced-generators', source: 'advanced', target: 'generators', sourceHandle: 'b', targetHandle: 'a', type: 'smooth', arrowHeadType: 'arrowclosed', style: { stroke: '#f79501' } },
     { id: 'advanced-eventloop', source: 'advanced', target: 'eventloop', sourceHandle: 'b', targetHandle: 'a', type: 'smooth', arrowHeadType: 'arrowclosed', style: { stroke: '#f79501' } },
+    { id: 'advanced-modulesystem', source: 'advanced', target: 'modulesystem', sourceHandle: 'b', targetHandle: 'a', type: 'smooth', arrowHeadType: 'arrowclosed', style: { stroke: '#f79501' } },
+
 
     {
       id: 'advancedscope',
