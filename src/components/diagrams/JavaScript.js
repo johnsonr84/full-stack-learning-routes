@@ -59,6 +59,30 @@ const jsElements = [
       },
       position: { x: 800, y: 150 },
     },
+    {
+      id: 'control-flow',
+      type: 'fundamentalsCustom',
+      data: {
+        text: 'Control Flow',
+      },
+      position: { x: 800, y: 300 },
+    },
+    {
+      id: 'expressions-operators',
+      type: 'fundamentalsCustom',
+      data: {
+        text: 'Expressions & Operators',
+      },
+      position: { x: 800, y: 600 },
+    },
+    {
+      id: 'functions',
+      type: 'fundamentalsCustom',
+      data: {
+        text: 'Functions',
+      },
+      position: { x: 800, y: 800 },
+    },
        {
       id: 'toolingmisc',
       type: 'toolingmiscCustom',
