@@ -43,6 +43,15 @@ const jsElements = [
       position: { x: 600, y: 0 },
     },
     {
+      id: 'equality',
+      type: 'fundamentalsCustom',
+      data: {
+        text: '== vs ===',
+      },
+      position: { x: 900, y: 0 },
+    },
+    { id: 'fundamentals-equality', source: 'fundamentals', target: 'equality', sourceHandle: 'd', targetHandle: 'a', type: 'straight', arrowHeadType: 'arrowclosed', label: 'Equality', style: { stroke: '#a8f047' }, labelBgStyle: { fill: '#23a5f7', color: '#23a5f7', fillOpacity: 0, fontWeight: 700 }, animated: true, labelStyle: { fill: '#a8f047', fontWeight: 700 } },
+    {
       id: 'toolingmisc',
       type: 'toolingmiscCustom',
       data: {
