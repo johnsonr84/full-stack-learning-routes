@@ -57,7 +57,15 @@ const jsElements = [
       data: {
         text: 'Loops',
       },
-      position: { x: 800, y: 150 },
+      position: { x: 800, y: 200 },
+    },
+    {
+      id: 'while',
+      type: 'fundamentalsCustom',
+      data: {
+        text: 'while',
+      },
+      position: { x: 900, y: 100 },
     },
     {
       id: 'control-flow',
