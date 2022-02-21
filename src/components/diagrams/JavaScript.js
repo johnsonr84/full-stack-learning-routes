@@ -40,32 +40,87 @@ const jsElements = [
       data: {
         text: <strong>Fundamentals</strong>,
       },
-      position: { x: 600, y: 0 },
+      position: { x: 450, y: 0 },
     },
-    { id: 'fundamentals-equality', source: 'fundamentals', target: 'equality', sourceHandle: 'd', targetHandle: 'a', type: 'straight', arrowHeadType: 'arrowclosed', label: 'Equality', style: { stroke: '#a8f047' }, labelBgStyle: { fill: '#23a5f7', color: '#23a5f7', fillOpacity: 0, fontWeight: 700 }, animated: true, labelStyle: { fill: '#a8f047', fontWeight: 700 } },
+    { id: 'fundamentals-equality', source: 'fundamentals', target: 'equality', sourceHandle: 'd', targetHandle: 'a', type: 'straight', arrowHeadType: 'arrowclosed', label: '', style: { stroke: '#a8f047' }, animated: true },
     {
       id: 'equality',
       type: 'fundamentalsCustom',
       data: {
+        text: 'Equality',
+      },
+      position: { x: 700, y: 0 },
+    },
+    { id: 'equality-==vs===', source: 'equality', target: '==vs===', sourceHandle: 'd', targetHandle: 'a', type: 'straight', arrowHeadType: 'arrowclosed', label: '', style: { stroke: '#a8f047' }, animated: false },
+    {
+      id: '==vs===',
+      type: 'fundamentalsCustom',
+      data: {
         text: '== vs ===',
       },
-      position: { x: 900, y: 0 },
+      position: { x: 950, y: 0 },
     },
     {
-      id: 'Loops',
+      id: 'loops',
       type: 'fundamentalsCustom',
       data: {
         text: 'Loops',
       },
-      position: { x: 800, y: 200 },
+      position: { x: 700, y: 200 },
     },
+    { id: 'loops-while', source: 'loops', target: 'while', sourceHandle: 'd', targetHandle: 'a', type: 'smooth', arrowHeadType: 'arrowclosed', label: '', style: { stroke: '#a8f047' }, animated: false },
+    { id: 'loops-do-while', source: 'loops', target: 'do-while', sourceHandle: 'd', targetHandle: 'a', type: 'smooth', arrowHeadType: 'arrowclosed', label: '', style: { stroke: '#a8f047' }, animated: false },
+    { id: 'loops-for-loop', source: 'loops', target: 'for-loop', sourceHandle: 'd', targetHandle: 'a', type: 'smooth', arrowHeadType: 'arrowclosed', label: '', style: { stroke: '#a8f047' }, animated: false },
+    { id: 'loops-break-continue', source: 'loops', target: 'break-continue', sourceHandle: 'd', targetHandle: 'a', type: 'smooth', arrowHeadType: 'arrowclosed', label: '', style: { stroke: '#a8f047' }, animated: false },
+    { id: 'loops-for-in', source: 'loops', target: 'for-in', sourceHandle: 'd', targetHandle: 'a', type: 'smooth', arrowHeadType: 'arrowclosed', label: '', style: { stroke: '#a8f047' }, animated: false },
+    { id: 'loops-for-of', source: 'loops', target: 'for-of', sourceHandle: 'd', targetHandle: 'a', type: 'smooth', arrowHeadType: 'arrowclosed', label: '', style: { stroke: '#a8f047' }, animated: false },
     {
       id: 'while',
       type: 'fundamentalsCustom',
       data: {
         text: 'while',
       },
-      position: { x: 900, y: 100 },
+      position: { x: 950, y: 100 },
+    },
+    {
+      id: 'do-while',
+      type: 'fundamentalsCustom',
+      data: {
+        text: 'do while',
+      },
+      position: { x: 950, y: 150 },
+    },
+    {
+      id: 'for-loop',
+      type: 'fundamentalsCustom',
+      data: {
+        text: 'for',
+      },
+      position: { x: 950, y: 200 },
+    },
+    {
+      id: 'break-continue',
+      type: 'fundamentalsCustom',
+      data: {
+        text: 'break/continue',
+      },
+      position: { x: 950, y: 250 },
+    },
+    {
+      id: 'for-in',
+      type: 'fundamentalsCustom',
+      data: {
+        text: 'for...in',
+      },
+      position: { x: 950, y: 300 },
+    },
+    {
+      id: 'for-of',
+      type: 'fundamentalsCustom',
+      data: {
+        text: 'for...of',
+      },
+      position: { x: 950, y: 350 },
     },
     {
       id: 'control-flow',
@@ -73,7 +128,7 @@ const jsElements = [
       data: {
         text: 'Control Flow',
       },
-      position: { x: 800, y: 300 },
+      position: { x: 700, y: 400 },
     },
     {
       id: 'expressions-operators',
@@ -81,7 +136,7 @@ const jsElements = [
       data: {
         text: 'Expressions & Operators',
       },
-      position: { x: 800, y: 600 },
+      position: { x: 700, y: 600 },
     },
     {
       id: 'functions',
@@ -89,7 +144,7 @@ const jsElements = [
       data: {
         text: 'Functions',
       },
-      position: { x: 800, y: 800 },
+      position: { x: 700, y: 800 },
     },
        {
       id: 'toolingmisc',
@@ -502,20 +557,20 @@ const jsElements = [
     backgroundColor: '#EFD81D',
     borderRadius: '2px',
     padding: '10px',
-    fontSize: 'small',
+    fontSize: 'large',
     textAlign: 'center',
-    width: 'auto',
+    width: '150px',
   }
 
   const fundamentalsNode = {
     color: 'black',
     // border: '1px solid black',
     backgroundColor: '#a8f047',
-    borderRadius: '2px',
+    borderRadius: '5px',
     padding: '10px',
-    fontSize: 'small',
+    fontSize: 'medium',
     textAlign: 'center',
-    width: 'auto',
+    width: '150px',
   }
 
   const toolingmiscNode = {
@@ -526,7 +581,7 @@ const jsElements = [
     padding: '10px',
     fontSize: 'small',
     textAlign: 'center',
-    width: 'auto',
+    width: '150px',
   }
 
   const advancedNode = {
@@ -535,9 +590,9 @@ const jsElements = [
     backgroundColor: '#f79501',
     borderRadius: '2px',
     padding: '10px',
-    fontSize: 'small',
+    fontSize: 'medium',
     textAlign: 'center',
-    width: 'auto',
+    width: '150px',
   }
 
   const webapisNode = {
@@ -548,7 +603,7 @@ const jsElements = [
     padding: '10px',
     fontSize: 'small',
     textAlign: 'center',
-    width: 'auto',
+    width: '150px',
   }
 
   const apiNode = {
@@ -557,9 +612,9 @@ const jsElements = [
     backgroundColor: '#35e0d2',
     borderRadius: '2px',
     padding: '2px',
-    fontSize: 'small',
+    fontSize: 'medium',
     textAlign: 'center',
-    width: '120px',
+    width: '150px',
   }
 
   const toolingNode = {
@@ -568,9 +623,9 @@ const jsElements = [
     backgroundColor: '#23a5f7',
     borderRadius: '2px',
     padding: '2px',
-    fontSize: 'small',
+    fontSize: 'medium',
     textAlign: 'center',
-    width: '120px',
+    width: '150px',
   }
   const adSubNode = {
     color: 'black',
@@ -578,9 +633,9 @@ const jsElements = [
     backgroundColor: '#f79501',
     borderRadius: '2px',
     padding: '2px',
-    fontSize: 'small',
+    fontSize: 'medium',
     textAlign: 'center',
-    width: '120px',
+    width: '150px',
   }
   const autoToolingNode = {
     color: 'black',
@@ -588,9 +643,9 @@ const jsElements = [
     backgroundColor: '#23a5f7',
     borderRadius: '2px',
     padding: '2px',
-    fontSize: 'small',
+    fontSize: 'medium',
     textAlign: 'center',
-    width: 'auto',
+    width: '150px',
   }
 
   const autoAdvancedNode = {
@@ -599,9 +654,9 @@ const jsElements = [
     backgroundColor: '#f79501',
     borderRadius: '2px',
     padding: '2px',
-    fontSize: 'small',
+    fontSize: 'medium',
     textAlign: 'center',
-    width: 'auto',
+    width: '150px',
   }
 
   const jsCustomNode = ({ data }) => {
