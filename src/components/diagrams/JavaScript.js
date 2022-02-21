@@ -27,7 +27,7 @@ const jsElements = [
       data: {
         text: <strong>Modern JavaScript Learning Routes</strong>,
       },
-      position: { x: 0, y: 0 },
+      position: { x: 0, y: -23 },
     },
     { id: 'javascript-fundamentals', source: 'javascript', target: 'fundamentals', sourceHandle: 'b', targetHandle: 'a', type: 'straight', arrowHeadType: 'arrowclosed', label: '', style: { stroke: '#a8f047' }, animated: true, },
     { id: 'javascript-toolingmisc', source: 'javascript', target: 'toolingmisc', sourceHandle: 'a', targetHandle: 'a', type: 'straight', arrowHeadType: 'arrowclosed', label: '', style: { stroke: '#23a5f7' }, animated: true, },
@@ -40,16 +40,16 @@ const jsElements = [
       data: {
         text: <strong>Fundamentals</strong>,
       },
-      position: { x: 450, y: 0 },
+      position: { x: 600, y: 0 },
     },
-    { id: 'fundamentals-equality', source: 'fundamentals', target: 'equality', sourceHandle: 'd', targetHandle: 'a', type: 'straight', arrowHeadType: 'arrowclosed', label: '', style: { stroke: '#a8f047' }, animated: true },
+    { id: 'fundamentals-equality', source: 'fundamentals', target: 'equality', sourceHandle: 'd', targetHandle: 'a', type: 'straight', arrowHeadType: 'arrowclosed', label: '', style: { stroke: '#a8f047' }, animated: false },
     {
       id: 'equality',
       type: 'fundamentalsCustom',
       data: {
         text: 'Equality',
       },
-      position: { x: 700, y: 0 },
+      position: { x: 900, y: 0 },
     },
     { id: 'equality-==vs===', source: 'equality', target: '==vs===', sourceHandle: 'd', targetHandle: 'a', type: 'straight', arrowHeadType: 'arrowclosed', label: '', style: { stroke: '#a8f047' }, animated: false },
     {
@@ -58,7 +58,7 @@ const jsElements = [
       data: {
         text: '== vs ===',
       },
-      position: { x: 950, y: 0 },
+      position: { x: 1200, y: 0 },
     },
     {
       id: 'loops',
@@ -66,7 +66,7 @@ const jsElements = [
       data: {
         text: 'Loops',
       },
-      position: { x: 700, y: 200 },
+      position: { x: 900, y: 200 },
     },
     { id: 'loops-while', source: 'loops', target: 'while', sourceHandle: 'd', targetHandle: 'a', type: 'smooth', arrowHeadType: 'arrowclosed', label: '', style: { stroke: '#a8f047' }, animated: false },
     { id: 'loops-do-while', source: 'loops', target: 'do-while', sourceHandle: 'd', targetHandle: 'a', type: 'smooth', arrowHeadType: 'arrowclosed', label: '', style: { stroke: '#a8f047' }, animated: false },
@@ -80,7 +80,7 @@ const jsElements = [
       data: {
         text: 'while',
       },
-      position: { x: 950, y: 100 },
+      position: { x: 1200, y: 100 },
     },
     {
       id: 'do-while',
@@ -88,7 +88,7 @@ const jsElements = [
       data: {
         text: 'do while',
       },
-      position: { x: 950, y: 150 },
+      position: { x: 1200, y: 150 },
     },
     {
       id: 'for-loop',
@@ -96,7 +96,7 @@ const jsElements = [
       data: {
         text: 'for',
       },
-      position: { x: 950, y: 200 },
+      position: { x: 1200, y: 200 },
     },
     {
       id: 'break-continue',
@@ -104,7 +104,7 @@ const jsElements = [
       data: {
         text: 'break/continue',
       },
-      position: { x: 950, y: 250 },
+      position: { x: 1200, y: 250 },
     },
     {
       id: 'for-in',
@@ -112,7 +112,7 @@ const jsElements = [
       data: {
         text: 'for...in',
       },
-      position: { x: 950, y: 300 },
+      position: { x: 1200, y: 300 },
     },
     {
       id: 'for-of',
@@ -120,7 +120,7 @@ const jsElements = [
       data: {
         text: 'for...of',
       },
-      position: { x: 950, y: 350 },
+      position: { x: 1200, y: 350 },
     },
     {
       id: 'control-flow',
@@ -128,7 +128,7 @@ const jsElements = [
       data: {
         text: 'Control Flow',
       },
-      position: { x: 700, y: 400 },
+      position: { x: 900, y: 400 },
     },
     {
       id: 'expressions-operators',
@@ -136,7 +136,7 @@ const jsElements = [
       data: {
         text: 'Expressions & Operators',
       },
-      position: { x: 700, y: 600 },
+      position: { x: 900, y: 600 },
     },
     {
       id: 'functions',
@@ -144,7 +144,7 @@ const jsElements = [
       data: {
         text: 'Functions',
       },
-      position: { x: 700, y: 800 },
+      position: { x: 900, y: 800 },
     },
        {
       id: 'toolingmisc',
@@ -152,7 +152,7 @@ const jsElements = [
       data: {
         text: <strong>Tooling & Misc</strong>,
       },
-      position: { x: 68, y: -270 },
+      position: { x: 0, y: -270 },
     },
     { id: 'toolingmisc-eslinte', source: 'toolingmisc', target: 'eslint', sourceHandle: 'b', targetHandle: 'a', type: 'smooth', arrowHeadType: 'arrowclosed', label: 'Linters', style: { stroke: '#23a5f7' }, labelBgStyle: { fill: '#23a5f7', color: '#23a5f7', fillOpacity: 0, fontWeight: 700 }, style: { stroke: '#23a5f7' }, labelStyle: { fill: '#23a5f7', fontWeight: 700 } },
     { id: 'toolingmisc-prettier', source: 'toolingmisc', target: 'prettier', sourceHandle: 'd', targetHandle: 'a', type: 'smooth', arrowHeadType: 'arrowclosed', label: 'Formatters', style: { stroke: '#23a5f7' }, labelBgStyle: { fill: '#23a5f7', color: '#23a5f7', fillOpacity: 0, fontWeight: 700 }, style: { stroke: '#23a5f7' }, labelStyle: { fill: '#23a5f7', fontWeight: 700 } },
@@ -169,7 +169,7 @@ const jsElements = [
       data: {
         text: 'eslint',
       },
-      position: { x: 300, y: -380 },
+      position: { x: 300, y: -360 },
     },
     // {
     //   id: 'linters',
@@ -193,7 +193,7 @@ const jsElements = [
       data: {
         text: 'Prettier',
       },
-      position: { x: 350, y: -340 },
+      position: { x: 300, y: -320 },
     },
     {
       id: 'webpack',
@@ -201,7 +201,7 @@ const jsElements = [
       data: {
         text: 'Webpack',
       },
-      position: { x: 400, y: -290 },
+      position: { x: 550, y: -290 },
     },
     {
       id: 'rollup',
@@ -209,7 +209,7 @@ const jsElements = [
       data: {
         text: 'Rollup',
       },
-      position: { x: 400, y: -262 },
+      position: { x: 550, y: -262 },
     },
     {
       id: 'bundlers',
@@ -225,7 +225,7 @@ const jsElements = [
       data: {
         text: 'Parcel',
       },
-      position: { x: 400, y: -233 },
+      position: { x: 550, y: -233 },
     },
     {
       id: 'typescript',
@@ -233,7 +233,7 @@ const jsElements = [
       data: {
         text: 'TypeScript',
       },
-      position: { x: 350, y: -180 },
+      position: { x: 300, y: -200 },
     },
     {
       id: 'nextsteps',
@@ -241,7 +241,7 @@ const jsElements = [
       data: {
         text: 'Next Steps',
       },
-      position: { x: 300, y: -140 },
+      position: { x: 300, y: -160 },
     },
 
     {
@@ -250,7 +250,7 @@ const jsElements = [
       data: {
         text: <strong>Advanced</strong>,
       },
-      position: { x: 83, y: 350 },
+      position: { x: 0, y: 350 },
     },
     { id: 'advanced-advancedscope', source: 'advanced', target: 'advancedscope', sourceHandle: 'b', targetHandle: 'a', type: 'smooth', arrowHeadType: 'arrowclosed', style: { stroke: '#f79501' } },
     { id: 'advanced-closure', source: 'advanced', target: 'closure', sourceHandle: 'b', targetHandle: 'a', type: 'smooth', arrowHeadType: 'arrowclosed', style: { stroke: '#f79501' } },
@@ -310,7 +310,7 @@ const jsElements = [
       data: {
         text: 'Implicit Binding',
       },
-      position: { x: 475, y: 120 },
+      position: { x: 550, y: 120 },
     },
     {
       id: 'explicitbinding',
@@ -318,7 +318,7 @@ const jsElements = [
       data: {
         text: 'Explicit Binding',
       },
-      position: { x: 475, y: 155 },
+      position: { x: 550, y: 155 },
     },
     {
       id: 'newbinding',
@@ -326,7 +326,7 @@ const jsElements = [
       data: {
         text: 'New Binding',
       },
-      position: { x: 475, y: 190 },
+      position: { x: 550, y: 190 },
     },
     {
       id: 'lexicalbinding',
@@ -334,7 +334,7 @@ const jsElements = [
       data: {
         text: 'Lexical Binding',
       },
-      position: { x: 475, y: 225 },
+      position: { x: 550, y: 225 },
     },
     {
       id: 'defaultbinding',
@@ -342,7 +342,7 @@ const jsElements = [
       data: {
         text: 'Default Binding',
       },
-      position: { x: 475, y: 265 },
+      position: { x: 550, y: 265 },
     },
     {
       id: 'prototype',
@@ -388,7 +388,7 @@ const jsElements = [
       data: {
         text: 'setTimeout',
       },
-      position: { x: 475, y: 360 },
+      position: { x: 550, y: 360 },
     },
     {
       id: 'setInterval',
@@ -396,7 +396,7 @@ const jsElements = [
       data: {
         text: 'setInterval',
       },
-      position: { x: 475, y: 400 },
+      position: { x: 550, y: 400 },
     },
     {
       id: 'callbacks',
@@ -404,7 +404,7 @@ const jsElements = [
       data: {
         text: 'callback',
       },
-      position: { x: 475, y: 440 },
+      position: { x: 550, y: 440 },
     },
     {
       id: 'promises',
@@ -412,7 +412,7 @@ const jsElements = [
       data: {
         text: 'Promises',
       },
-      position: { x: 475, y: 480 },
+      position: { x: 550, y: 480 },
     },
     {
       id: 'asyncawait',
@@ -420,7 +420,7 @@ const jsElements = [
       data: {
         text: 'async awaite',
       },
-      position: { x: 475, y: 520 },
+      position: { x: 550, y: 520 },
     },
 
     {
@@ -467,7 +467,7 @@ const jsElements = [
       data: {
         text: 'CJS',
       },
-      position: { x: 475, y: 610 },
+      position: { x: 550, y: 610 },
     },
     {
       id: 'esm',
@@ -475,7 +475,7 @@ const jsElements = [
       data: {
         text: 'ESM',
       },
-      position: { x: 475, y: 650 },
+      position: { x: 550, y: 650 },
     },
     {
       id: 'importexport',
@@ -483,7 +483,7 @@ const jsElements = [
       data: {
         text: 'Import/Export',
       },
-      position: { x: 475, y: 690 },
+      position: { x: 550, y: 690 },
     },
     {
       id: 'defaultnamedexports',
@@ -491,7 +491,7 @@ const jsElements = [
       data: {
         text: 'Default/ Named Exports',
       },
-      position: { x: 475, y: 730 },
+      position: { x: 550, y: 730 },
     },
 
     {
@@ -500,7 +500,7 @@ const jsElements = [
       data: {
         text: <strong>Web APIs</strong>,
       },
-      position: { x: -240, y: 0 },
+      position: { x: -400, y: 0 },
     },
     { id: 'webapis-dom', source: 'webapis', target: 'dom', sourceHandle: 'b', targetHandle: 'a', type: 'smooth', arrowHeadType: 'arrowclosed', label: '', style: { stroke: '#35e0d2' } },
     { id: 'webapis-xhr-fetch', source: 'webapis', target: 'xhr-fetch', sourceHandle: 'b', targetHandle: 'a', type: 'smooth', arrowHeadType: 'arrowclosed', label: '', style: { stroke: '#35e0d2' } },
@@ -514,7 +514,7 @@ const jsElements = [
       data: {
         text: 'DOM',
       },
-      position: { x: -410, y: -57 },
+      position: { x: -630, y: -57 },
     },
     {
       id: 'xhr-fetch',
@@ -522,7 +522,7 @@ const jsElements = [
       data: {
         text: 'XHR & Fetch',
       },
-      position: { x: -410, y: -24 },
+      position: { x: -630, y: -24 },
     },
     {
       id: 'storage',
@@ -530,7 +530,7 @@ const jsElements = [
       data: {
         text: 'Storage',
       },
-      position: { x: -410, y: 9 },
+      position: { x: -630, y: 9 },
     },
     {
       id: 'video-audio',
@@ -538,7 +538,7 @@ const jsElements = [
       data: {
         text: 'Video & Audio',
       },
-      position: { x: -410, y: 40 },
+      position: { x: -630, y: 40 },
     },
     {
       id: 'drawing-graphics',
@@ -546,7 +546,7 @@ const jsElements = [
       data: {
         text: 'Drawing Graphics',
       },
-      position: { x: -410, y: 72 },
+      position: { x: -630, y: 72 },
     },
     
   ];
